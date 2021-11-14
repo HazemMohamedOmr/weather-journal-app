@@ -3,7 +3,12 @@ projectData = {};
 
 // Require Express to run server and routes
 
+const bodyParser = require('body-parser');
+const express = require('express');
+
 // Start up an instance of app
+
+const app = express();
 
 /* Middleware*/
 //Here we are configuring express to use body-parser as middle-ware.
@@ -12,8 +17,30 @@ app.use(bodyParser.json());
 
 // Cors for cross origin allowance
 
+const cors = require('cors');
+
 // Initialize the main project folder
 app.use(express.static('website'));
 
 
 // Setup Server
+
+const port = 8000;
+const server = app.listen(port, ()=>{console.log(`running on localhost: ${port}`)});
+
+app.get('/data', (req, res)=>{
+    console.log(projectData);
+    res.send(projectData);
+})
+
+app.post('/weatherInfo', (req, res)=>{
+    let data = req.body;
+    console.log(data);
+    projectData['main'] = data.main;
+    projectData['sys'] = data.sys;
+    projectData['wind'] = data.wind;
+    projectData['date'] = data.date;
+    projectData['name'] = data.name;
+    projectData['userRes'] = data.userRes;
+    res.send(projectData);
+})
