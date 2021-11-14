@@ -2,11 +2,11 @@ body{
     background: #fffff8;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
-
+/*
 #app{
     display: grid;
     grid-auto-rows: minmax(150px, auto);
-    /* grid-template-columns:  */
+    
     height:100vh;
     background: #f23557;
     color: #f0d43a;
@@ -47,7 +47,7 @@ body{
 
 }
 
-/*  Basic Styling To Override Default For Basic HTML Elements */
+
 label{
     display:block;
     font-size: 27px;
@@ -84,28 +84,230 @@ textarea{
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
 }
-/* Reset style for HTML element on active to have no border*/
+
 input:focus,
 select:focus,
 textarea:focus,
 button:focus {
     outline: none;
 }
-/* Style for Placeholder Text*/
-::placeholder { /* Firefox, Chrome, Opera */ 
+
+::placeholder { 
     color: #f0d43a; 
     font-family: 'Oswald', sans-serif;
 
 } 
   
-:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
+:-ms-input-placeholder { 
     color: #f0d43a; 
     font-family: 'Oswald', sans-serif;
 
 } 
   
-::-ms-input-placeholder { /* Microsoft Edge */ 
+::-ms-input-placeholder { 
     color: #f0d43a; 
     font-family: 'Oswald', sans-serif;
 
 } 
+
+*/
+/* My Styles */
+
+    /* General Styles */
+
+body{
+    margin: 0;
+    background-color: #f2f2f2;
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+}
+
+.container{
+    padding: 0 3em;
+}
+
+section{
+    padding: 2rem 0 0.5rem;
+}
+
+    /* Header */
+
+.main-header .title{
+    text-align: center;
+}
+
+.main-header .title h1{
+    padding: 0.25em 0;
+    font-size: 4em;
+}
+
+.title-border, .sub-title-border{
+    position: relative;
+}
+
+.title-border .span{
+    width: 18%;
+    height: 1em;
+    background-color: #f1900e;
+    margin: 0 auto;
+    border-radius: 0 0 1em 1em;
+}
+
+    /* api sec*/
+
+.sub-title{
+    padding: 0.8em 0 0.6rem;
+    font-size: 1.5em;
+}
+
+.api-section .sub-title-border .span{
+    width: 16%;
+    height: 0.8em;
+    background-color: #f1900e;
+    border-radius: 0 0 1em 0;
+}
+
+.api-section .api-form{
+    padding: 3rem 3rem 0;
+}
+
+.api-section .api-form .field{
+    margin-bottom: 1em;
+}
+
+.api-section .api-form .input-lbl{
+    display: block;
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+
+.api-section .api-form .inp{
+    height: 1.4em;
+    width: 100%;
+    padding: 12px 12px;
+    margin-bottom: 1.4em;
+    font-size: 14px;
+    color: #555;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    outline: none;
+}
+
+.api-section .api-form .inp:hover{
+    border-color: #f1900e;
+    box-shadow: 0px 0px 8px 0px #f1900e
+}
+
+.api-section .api-form .inp:focus{
+    border-color: #ff4d70;
+    box-shadow: 0px 0px 8px 0px #ffb3c2;
+}
+
+.api-section .api-form .inp:active {
+    border-color: transparent;
+}
+
+.api-section .api-form .text-area{
+    height: 7em;
+    resize: none;
+    font-family: 'Tahoma';
+}
+
+.api-section .api-form button{
+    padding: 12px 20px;
+    color: white;
+    background-color: #f5b056;
+    border: none;
+    border-radius: 4px;
+    text-transform: uppercase;
+    transition: color 0.4s ease-in-out;
+}
+
+.api-section .api-form button:hover{
+    background-color: #f1900e;
+    cursor: pointer;
+}
+
+
+.api-result .sub-title-border .span{
+    width: 12%;
+    height: 0.8em;
+    background-color: #f1900e;
+    border-radius: 0 0 1em 0;
+}
+
+.api-result .api-content{
+    padding: 3rem 3rem 2rem;
+    font-family: 'Tahoma', sans-serif;
+}
+
+.api-content .info-container{
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    margin-bottom: 2em;
+}
+
+.info-container .lable{
+    font-size: 2rem;
+    width: 25%;
+}
+
+.info-container .info{
+    font-size: 2rem;
+    color: #8e5b19;
+}
+
+.info-container .marker{
+    color: black;
+}
+
+.info-container .info .mini-info:first-child{
+    margin-top: 3rem;
+}
+
+.info-container .info .mini-info{
+    margin-bottom: 0.5rem;
+}
+
+footer{
+    padding: 2rem 0;
+    background-color: #ffffff;
+}
+
+footer .copy-rigth{
+    font-size: 1.5rem;
+    font-family: 'Tahoma';
+}
+
+.span-hint{
+    font-size: 0.6em;
+    color: #ff0000e0;
+    font-weight: 700;
+    font-family: 'Tahoma';
+    margin-left: 0.6em;
+}
+
+@media only screen and (max-width: 760px){
+    html{
+        font-size: 12px;
+    }
+
+    .container{
+        padding: 0 2em;
+    }
+}
+
+@media only screen and (max-width: 550px){
+    html{
+        font-size: 10px;
+    }
+
+    .container{
+        padding: 0 2em;
+    }
+}

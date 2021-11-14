@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
  <body>
-<div id = "app">
+<!-- <div id = "app">
   <div class ="holder headline">
     Weather Journal App
   </div>
@@ -28,7 +28,124 @@
    <div id = "content"></div>
   </div>
   </div>
-  </div>
+  </div> -->
+  <header class="main-header">
+    <div class="container">
+      <div class="title">
+        <h1> Weather Journal App </h1>
+      </div>
+      
+      <div class="title-border">
+        <div class="span"></div>
+      </div>
+    </div>
+  </header>
+
+  <section class="api-section">
+    <div class="container">
+      <div class="sub-title">
+        <h2>Weather input data</h2>
+      </div>
+      <div class="sub-title-border">
+        <div class="span"></div>
+      </div>
+
+      <div class="api-form">
+        <div class="field">
+          <label class="input-lbl" for="zip">Enter Zipcode here:   <span class="span-hint">Ex: 94040, 10115, 90001, 32003</span></label>
+          <input class="inp" type="text" id="zip" placeholder="Enter zip code here">
+        </div>
+
+        <div class="field">
+          <label class="input-lbl" for="feelings">How are you feeling today?</label>
+          <textarea class="inp text-area" id="feelings" placeholder="Enter your feelings here"></textarea>
+        </div>
+
+        <div class="field">
+          <button id="btn-submit" type="submit"> Generate </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="api-result">
+    <div class="container">
+      <div class="sub-title">
+        <h2>Weather Info</h2>
+      </div>
+      <div class="sub-title-border">
+        <div class="span"></div>
+      </div>
+
+      <div class="api-content">
+        <div class="info-container">
+          <div class="lable">
+            Country :
+          </div>
+          <div class="info" id="country">
+
+          </div>
+        </div>
+
+        <div class="info-container">
+          <div class="lable">
+            Name :
+          </div>
+          <div class="info" id="name">
+
+          </div>
+        </div>
+
+        <div class="info-container">
+          <div class="lable">
+            Temperature :
+          </div>
+          <div class="info">
+            <div class="mini-info">Current <span class="marker">-></span> <span class="info-spn" id="temp-curr"></span></div>
+            <div class="mini-info">Max <span class="marker">-></span> <span class="info-spn" id="temp-max"></span></div>
+            <div class="mini-info">Min <span class="marker">-></span> <span class="info-spn" id="temp-min"></span></div>
+          </div>
+        </div>
+
+        <div class="info-container">
+          <div class="lable">
+            Date :
+          </div>
+          <div class="info" id="date">
+            
+          </div>
+        </div>
+
+        <div class="info-container">
+          <div class="lable">
+            Wind :
+          </div>
+          <div class="info">
+            <div class="mini-info">Speed <span class="marker">-></span> <span class="info-spn" id="wind-speed"></span></div>
+            <div class="mini-info">Deg <span class="marker">-></span> <span class="info-spn" id="wind-deg"></span></div>
+          </div>
+        </div>
+
+        <div class="info-container">
+          <div class="lable">
+            Your feelings :
+          </div>
+          <div class="info" id="opinion">
+            
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="copy-rigth">
+        All &copy Hazem Mohamed
+      </div>
+    </div>
+  </footer>
 <script src="app.js" type="text/javascript"></script>
 
 </body>
